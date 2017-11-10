@@ -1,6 +1,6 @@
 {
   "name": "objectmapper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Object.prototype.map helper",
   "main": "index.js",
   "scripts": {
