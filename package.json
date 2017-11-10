@@ -1,0 +1,19 @@
+{
+  "name": "objectmapper",
+  "version": "0.0.1",
+  "description": "Object.prototype.map helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "object",
+    "prototype",
+    "map",
+    "jsx",
+    "render"
+  ],
+  "author": "Bas Yuksel",
+  "license": "MIT",
+  "dependencies": {}
+}
