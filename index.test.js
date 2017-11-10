@@ -49,16 +49,24 @@ return value;
 });
 
 
+// TEST CASE FOR EMPTY OBJECT
+
+const emptyTestObject = {};
+const expectedEmptyArray = [];
+const resultEmptyArray = emptyTestObject.map((key, value)=>{
+  return value;
+});
+
 
 
 function compare(arrayOne,arrayTwo){
-  return !arrayOne.some(function (value, index, array) {
+  return !arrayOne.some(function (value, index) {
     // compare if the value is String or Number
       if (typeof value === String || typeof value === Number){
             return value != arrayTwo[index];
     // compare if the value is an Object
       } else if (typeof value === Object){
-            // TODO: CHECK IF THE OBJECT HAS OBJECT OR ARRAY CHILDREN, IF SO, compare
+            // TODO: CHECK IF THE OBJECT HAS OBJECT OR ARRAY CHILDREN, IF SO, object.map both into arrays, and call compare recursively
             // ELSE RETURN
             return !compare(Object.entries(value), Object.entries(arrayTwo[index]))
     // compare if the value is an Array
@@ -107,3 +115,11 @@ if(!compare(resultArrayOfBooleans, expectedArrayOfBooleans)){
 } else {
   console.log('Array of booleans: OK');
 }
+
+if(!compare(resultEmptyArray, expectedEmptyArray)){
+  throw new Error('Empty arrays not deep equal');
+} else {
+  console.log('Empty array: OK');
+}
+
+console.log('All tests pass.');

@@ -1,12 +1,13 @@
 {
   "name": "objectmapper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Object.prototype.map helper",
   "main": "index.js",
   "scripts": {
     "test": "node index.test.js",
     "prepublish": "npm test"
   },
+  "repository": "https://github.com/Babazon/objectmapper",
   "keywords": [
     "object",
     "prototype",
